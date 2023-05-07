@@ -27,7 +27,7 @@ const AllProducts = () => {
         })
           .map((data) => 
             <div key={data.id}>
-              <div  className=" h-[415px] border bg-gray-50 overflow-hidden rounded-3xl ">
+              <div  className=" h-full border bg-gray-50 overflow-hidden rounded-3xl ">
                         <img src={data.pix} alt="pix" className='w-full h-[230px]' />
                 <div className='mt-2 space-y-3 px-4 text-left'>
 
@@ -49,7 +49,7 @@ const AllProducts = () => {
 
                     <div>
                     <button
-                      className='bg-pry text-gray-100 mb-6 md:mb-2  px-6 py-2 rounded-lg text-sm'
+                      className='bg-pry text-gray-100 mmb-2  px-6 py-2 rounded-lg text-sm'
                       onClick={() => handleAddToCart({ ...data, count: 1 , total: parseInt(data.price)})}
                     >ADD TO CART</button>
                     </div>
