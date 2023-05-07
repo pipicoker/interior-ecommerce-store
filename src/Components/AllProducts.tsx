@@ -49,7 +49,7 @@ const AllProducts = () => {
 
                     <div>
                     <button
-                      className='bg-pry text-gray-100 mmb-2  px-6 py-2 rounded-lg text-sm'
+                      className='bg-pry text-gray-100 mb-4 md:mb-0  px-6 py-2 rounded-lg text-sm'
                       onClick={() => handleAddToCart({ ...data, count: 1 , total: parseInt(data.price)})}
                     >ADD TO CART</button>
                     </div>
