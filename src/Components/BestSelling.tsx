@@ -9,12 +9,12 @@ const BestSelling = () => {
       <section className='mt-32 px-[60px] font-semibold text-blac'>
             <div className='  flex justify-between items-center'>
                 <div>
-                <div className='flex items-center space-x-3 text-3xl  text-pry'>
+                <div className='flex items-center space-x-3 text-xl md:text-3xl  text-pry'>
                 <img src={Line} alt="" />
                 <p>Best Selling</p>
                 </div>
             
-                <h3 className='mt-2 text-5xl text-left'>Our Best Selling Products</h3>   
+                <h3 className='mt-2 text-3xl md:text-5xl text-left'>Our Best Selling Products</h3>   
             </div>
             
             <div className='md:flex items-center space-x-4' >
