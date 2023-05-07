@@ -6,6 +6,7 @@ import NavData from '../Data/NavData';
 import logo from '../Images/logo.png'
 import { BiUser } from 'react-icons/bi';
 import { AiOutlineHeart } from 'react-icons/ai';
+import { AiOutlineClose } from 'react-icons/ai';
 import { RiShoppingCartLine } from 'react-icons/ri';
 import { RxHamburgerMenu } from 'react-icons/rx';
 
@@ -51,7 +52,10 @@ const Header = () => {
               
           </div>
       </div>
-      <nav className={` md:hidden items-end md:space-x-8 pt-12  text-left  ${mobileNav ? 'block absolute fixed h-screen w-screen  bg-[#F5F5F5] ' : 'hidden'}`}>
+      <nav className={` md:hidden items-end md:space-x-8 pt-12  text-left  ${mobileNav ? 'block fixed top-0 h-screen w-screen  bg-[#F5F5F5] z-50' : 'hidden'}`}>
+        <div className='flex justify-end px-12 text-pry text-4xl' onClick={() => setMobileNav(false)}>
+          <AiOutlineClose  />
+        </div>
             <ul className='flex flex-col space-y-6 divide-y divide-pry '>
               {NavData.map((data) => 
                 <Link to={data.path as string}
