@@ -41,7 +41,7 @@ const ProductNAv = () => {
               
               
                     </div>
-                    <input type="text" id="simple-search" className=" text-sm rounded-xl block w-32 lg:w-72  h-6 pl-10 p-2.5 py-4 bg-[#F5F5F5]  " placeholder="Search..." required onChange={(e) => setSearch(e.target.value)}/>
+                    <input type="text" id="simple-search" className=" text-sm rounded-xl block w-48 lg:w-72  h-6 pl-10 p-2.5 py-4 bg-[#F5F5F5]  " placeholder="Search..." required onChange={(e) => setSearch(e.target.value)}/>
                 </div>
                 
       </form>
