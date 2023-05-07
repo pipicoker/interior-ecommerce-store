@@ -9,7 +9,7 @@ const BestSelling = () => {
       <section className='mt-32 px-[60px] font-semibold text-blac'>
             <div className='  flex justify-between items-center'>
                 <div>
-                <div className='flex items-center space-x-3 text-xl md:text-3xl  text-pry'>
+                <div className='flex items-center space-x-3 text-2xl md:text-3xl  text-pry'>
                 <img src={Line} alt="" />
                 <p>Best Selling</p>
                 </div>
@@ -17,7 +17,7 @@ const BestSelling = () => {
                 <h3 className='mt-2 text-3xl md:text-5xl text-left'>Our Best Selling Products</h3>   
             </div>
             
-            <div className='md:flex items-center space-x-4' >
+            <div className='hidden md:flex items-center space-x-4' >
                 <p>Explore All</p>
                 <img src={Arrow} alt="" />
             </div>

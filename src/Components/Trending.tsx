@@ -10,7 +10,7 @@ const Trending = () => {
     <div className='mt-32 pb-32 px-[60px] font-semibold'>
       <div className='  flex justify-between items-center'>
                 <div>
-                <div className='flex items-center space-x-3 text-xl md:text-3xl  text-pry'>
+                <div className='flex items-center space-x-3 text-2xl md:text-3xl  text-pry'>
                 <img src={Line} alt="" />
                 <p>Trending</p>
                 </div>
@@ -18,7 +18,7 @@ const Trending = () => {
                 <h3 className='mt-2 text-3xl md:text-5xl text-left'>Our Trending Products</h3>   
             </div>
             
-            <div className='md:flex items-center space-x-4 text-blac' >
+            <div className='hidden md:flex items-center space-x-4 text-blac' >
                 <p className=''>Explore All</p>
                 <img src={Arrow} alt="" />
             </div>

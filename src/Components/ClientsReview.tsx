@@ -12,22 +12,22 @@ const ClientsReview = () => {
     <div className='mt-32 px-[60px] font-semibold'>
       <div className='  flex justify-between items-center'>
             <div>
-                <div className='flex items-center space-x-3 text-xl md:text-3xl  text-pry'>
+                <div className='flex items-center space-x-3 text-2xl md:text-3xl  text-pry'>
                 <img src={Line} alt="" />
                 <p>Clients Review</p>
                 </div>
             
-                <h3 className='mt-2 text-2xl md:text-5xl text-left'>What Our Clients Say</h3>   
+                <h3 className='mt-2 text-3xl md:text-5xl text-left'>What Our Clients Say</h3>   
             </div>
             
-            <div className='flex items-center space-x-4' >
-                <img src={Arrow2} alt="left arrow"  className='hidden md:block'/>
-                <img src={Arrow} alt="right arrow" />
+            <div className='hidden md:flex items-center space-x-4' >
+                <img src={Arrow2} alt="left arrow"  />
+                <img src={Arrow} alt="right arrow"  />
             </div>
         
           </div>
           
-          <div className='mt-16 lg:ml-[256px] ml-12 grid lg:grid-cols-3 '>
+          <div className='mt-16 lg:ml-[256px] md:ml-12 grid lg:grid-cols-3 '>
               <div className='w-[202px] h-[510px] bg-pry flex items-center justify-center justify-self-center lg:justify-self-start rounded-[32px]'>
                   <img src={man} className="absolute w-[352px] h-[400px] md:w-[427px] md:h-[440px] shrink-0" alt="" />
 
@@ -39,7 +39,7 @@ const ClientsReview = () => {
                   <div>
                       <img src={up} className="flex align-left" alt="" />
                       <p className='mt-8 mb-6 text-left text-xl text-blac2 opacity-60 font-normal'>Shopping for furniture online allows customers to browse and purchase items from the comfort of their own home. Shopping for furniture online allows customers to browse and purchase items from the comfort of their own home. Shopping for furniture online allows customers to browse and purchase items from the comfort of their own home.</p>
-                      <div className='flex  justify-end'>
+                      <div className=' flex  justify-end'>
                         <img src={down} alt="" className='' />
                       </div>
                   </div>

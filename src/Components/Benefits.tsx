@@ -9,12 +9,12 @@ import Line from '../Images/Line.png'
 const Benefits = () => {
   return (
     <section className='mt-32 px-[60px] font-semibold'>
-          <div className='flex items-center space-x-3 text-3xl  text-pry'>
+          <div className='flex items-center space-x-3 text-2xl md:text-3xl  text-pry'>
               <img src={Line} alt="" />
               <p>Why choose us?</p>
           </div>
           
-          <h3 className='mt-2 text-5xl text-left text-blac'>Benefit Of Choosing Us</h3>
+          <h3 className='mt-2 text-3xl md:text-5xl text-left text-blac'>Benefit Of Choosing Us</h3>
 
           <div className='mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 '>
               {BenefitsData.map((data) => 
