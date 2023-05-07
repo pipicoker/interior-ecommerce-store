@@ -8,7 +8,7 @@ import Line from '../Images/Line.png'
 
 const Benefits = () => {
   return (
-    <section className='mt-32 px-[60px] font-semibold'>
+    <section className='mt-32 px-[52px] md:px-[60px] font-semibold'>
           <div className='flex items-center space-x-3 text-2xl md:text-3xl  text-pry'>
               <img src={Line} alt="" />
               <p>Why choose us?</p>
