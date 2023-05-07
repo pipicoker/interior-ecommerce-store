@@ -18,8 +18,8 @@ const Trending = () => {
                 <h3 className='mt-2 text-5xl text-left'>Our Trending Products</h3>   
             </div>
             
-            <div className='flex items-center space-x-4 text-blac' >
-                <p>Explore All</p>
+            <div className='md:flex items-center space-x-4 text-blac' >
+                <p className=''>Explore All</p>
                 <img src={Arrow} alt="" />
             </div>
         

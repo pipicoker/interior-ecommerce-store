@@ -17,7 +17,7 @@ const BestSelling = () => {
                 <h3 className='mt-2 text-5xl text-left'>Our Best Selling Products</h3>   
             </div>
             
-            <div className='flex items-center space-x-4' >
+            <div className='md:flex items-center space-x-4' >
                 <p>Explore All</p>
                 <img src={Arrow} alt="" />
             </div>
