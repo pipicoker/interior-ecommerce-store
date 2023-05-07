@@ -32,7 +32,7 @@ const ProductNAv = () => {
               </ul>
           </nav>
 
-      <div className='flex justify-between pt-2 md:pt-0 md:space-x-24'>
+      <div className='flex justify-between pt-2 pb-4 md:pb-0 md:pt-0 md:space-x-24'>
                   <form className="flex items-center">   
                 <label htmlFor="simple-search" className="sr-only">Search</label>
                 <div className="relative w-full">

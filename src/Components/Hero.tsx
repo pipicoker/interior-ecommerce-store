@@ -15,9 +15,9 @@ const Hero = () => {
 
           <section className='flex justify-center space-x-4 -mt-8'>
               {HeroData.map((data) =>
-                  <div  key={data.id} className="w-[315px] h-[184px] flex flex-col justify-center items-center rounded-2xl  bg-white border border-graay font-semibold space-y-3">
-                      <h2 className='text-6xl  text-pry'>{data.figure}</h2>
-                      <div className='text-2xl '>
+                  <div  key={data.id} className="w-[280px] md:w-[315px] h-[184px] flex flex-col justify-center items-center rounded-2xl  bg-white border border-graay font-semibold space-y-3">
+                      <h2 className='text-4xl md:text-6xl  text-pry'>{data.figure}</h2>
+                      <div className='text-xl md:text-2xl '>
                            <p>{data.title1}</p>
                       <p>{data.title2}</p>
                       </div>
