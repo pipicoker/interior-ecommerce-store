@@ -1,4 +1,3 @@
-import React, {useEffect, useRef} from 'react'
 import Benefits from '../Components/Benefits'
 import BestSelling from '../Components/BestSelling'
 import ClientsReview from '../Components/ClientsReview'
