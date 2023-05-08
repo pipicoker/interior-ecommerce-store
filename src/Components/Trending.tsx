@@ -1,13 +1,35 @@
-import React from 'react'
+import React, {useRef, useEffect} from 'react'
 
 import Line from '../Images/Line.png'
 import Arrow from '../Images/Arrow.png'
 
 import TrendingData from '../Data/TrendingData'
+import { useAnimation, motion, useInView } from "framer-motion";
+
 
 const Trending = () => {
+  const controls = useAnimation();
+  const ref = useRef(null)
+  const inView = useInView(ref)
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    console.log(inView);
+    
+  }, [controls, inView]);
   return (
-    <div className='mt-32 pb-32 px-[60px] font-semibold'>
+    <motion.div className='mt-32 pb-32 px-[60px] font-semibold'
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={{
+        hidden: {opacity: 0, y: 75},
+        visible: {opacity: 1, y: 0},
+      }}
+      transition={{duration: 3, delay: 0.25}}
+    >
       <div className='  flex justify-between items-center'>
                 <div>
                 <div className='flex items-center space-x-3 text-2xl md:text-3xl  text-pry'>
@@ -38,7 +60,7 @@ const Trending = () => {
                   </div>
               )}
           </div>
-    </div>
+    </motion.div>
   )
 }
 

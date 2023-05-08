@@ -1,14 +1,35 @@
-import React from 'react'
+import React, {useRef, useEffect} from 'react'
 import BenefitsData from '../Data/BenefitsData'
 
 import Line from '../Images/Line.png'
 
 // import { BsDashLg } from 'react-icons/bs';
+import { useAnimation, motion, useInView } from "framer-motion";
 
 
 const Benefits = () => {
+  const controls = useAnimation();
+  const ref = useRef(null)
+  const inView = useInView(ref)
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    console.log(inView);
+    
+  }, [controls, inView]);
   return (
-    <section className='mt-32 px-[52px] md:px-[60px] font-semibold'>
+    <motion.section
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={{
+        hidden: {opacity: 0, x: 75},
+        visible: {opacity: 1, x: 0},
+      }}
+      transition={{duration: 3, delay: 0.25}}
+      className='mt-32 px-[52px] md:px-[60px] font-semibold'>
           <div className='flex items-center space-x-3 text-2xl md:text-3xl  text-pry'>
               <img src={Line} alt="" />
               <p>Why choose us?</p>
@@ -25,7 +46,7 @@ const Benefits = () => {
               )}
           </div>
           
-    </section>
+    </motion.section>
   )
 }
 

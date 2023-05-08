@@ -1,10 +1,35 @@
-import React from 'react'
+import React, {useRef, useEffect} from 'react'
 import HeroData from '../Data/HeroData'
+import { useAnimation, motion, useInView } from "framer-motion";
+
 
 const Hero = () => {
+    const controls = useAnimation();
+  const ref = useRef(null)
+    const inView = useInView(ref)
+
+    useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    console.log(inView);
+    
+  }, [controls, inView]);
+
   return (
-      <main >
-          <section className='bg-hero-bg h-[638px]  flex flex-col justify-center items-center'>
+      <motion.main
+          ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={{
+        hidden: {opacity: 0, x: 75},
+        visible: {opacity: 1, x: 0},
+      }}
+      transition={{duration: 0.5, delay: 0.25}}
+      >
+          <section
+            
+              className='bg-hero-bg h-[638px]  flex flex-col justify-center items-center'>
               <h1 className='text-5xl md:text-7xl text-center  font-semibold text-white'>Best furniture to <br />
                   your doorstep</h1>
               
@@ -26,7 +51,7 @@ const Hero = () => {
               )}
           </section>
           
-    </main>
+    </motion.main>
   )
 }
 
