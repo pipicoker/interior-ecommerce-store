@@ -19,6 +19,9 @@ const ClientsReview = () => {
     if (inView) {
       controls.start("visible");
     }
+    else {
+      controls.start("hidden");
+    }
     console.log(inView);
     
   }, [controls, inView]);
@@ -31,7 +34,7 @@ const ClientsReview = () => {
         hidden: {opacity: 0, y: 75},
         visible: {opacity: 1, y: 0},
       }}
-      transition={{duration: 0.5, delay: 0.25}}
+      transition={{duration: 2, delay: 0.25}}
     >
       <div className='  flex justify-between items-center'>
             <div>

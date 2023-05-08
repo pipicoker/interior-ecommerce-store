@@ -16,6 +16,9 @@ const Trending = () => {
     if (inView) {
       controls.start("visible");
     }
+    else {
+      controls.start("hidden");
+    }
     console.log(inView);
     
   }, [controls, inView]);
@@ -47,9 +50,9 @@ const Trending = () => {
         
           </div>
           
-          <div className='mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-4'>
+          <div className='mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4'>
               {TrendingData.map((data) => 
-                  <div key={data.id} className="h-[415px] pt-[18px]  px-4 bg-white border border-graay rounded-2xl">
+                  <div key={data.id} className="h-[415px] pt-[18px]  px-4 bg-white border border-graay rounded-2xl transform transition duration-500 hover:scale-110">
                       <img src={data.pix} className='w-[281px] h-[275px]' alt="" />
 
                       <div className='mt-2 space-y-3'>

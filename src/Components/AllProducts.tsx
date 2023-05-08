@@ -27,7 +27,7 @@ const AllProducts = () => {
         })
           .map((data) => 
             <div key={data.id}>
-              <div  className=" h-full border bg-gray-50 overflow-hidden rounded-3xl ">
+              <div  className=" h-full border bg-gray-50 overflow-hidden rounded-3xl transform transition duration-500 hover:scale-110">
                         <img src={data.pix} alt="pix" className='w-full h-[230px]' />
                 <div className='mt-2 space-y-3 px-4 text-left'>
 

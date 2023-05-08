@@ -16,6 +16,9 @@ const BestSelling = () => {
     if (inView) {
       controls.start("visible");
     }
+    else {
+      controls.start("hidden");
+    }
     console.log(inView);
     
   }, [controls, inView]);
@@ -25,8 +28,8 @@ const BestSelling = () => {
       animate={controls}
       initial="hidden"
       variants={{
-        hidden: {opacity: 0, x: -75},
-        visible: {opacity: 1, x: 0},
+        hidden: {opacity: 0, y: -75},
+        visible: {opacity: 1, y: 0},
       }}
       transition={{duration: 3, delay: 0.25}}
         >
@@ -47,9 +50,9 @@ const BestSelling = () => {
         
             </div> 
             
-            <div className='mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-4  '>
+            <div className='mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4  '>
                 {BestSellingData.map((data) => 
-                    <div key={data.id} className=" h-[415px] border border-graay rounded-3xl">
+                    <div key={data.id} className=" h-[415px] border border-graay rounded-3xl transform transition duration-500 hover:scale-110 ">
                         <img src={data.pix} alt="pix" className='w-full h-[275px]' />
                         <div className='mt-2 space-y-3'>
                             <p className='text-sm'>{data.design}</p>

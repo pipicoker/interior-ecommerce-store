@@ -45,15 +45,15 @@ const Header = () => {
               <BiUser className='h-7 w-5'/>
               <AiOutlineHeart className='h-6 w-7 hidden md:block'/>
           <Link to="/Cart"><RiShoppingCartLine className='h-7 w-7' /></Link>
-          <RxHamburgerMenu className='md:hidden h-7 w-6 text-pry' onClick={handleMenu}/>
+          <RxHamburgerMenu className='md:hidden h-7 w-6 text-pry ' onClick={handleMenu}/>
             </div>
         
 
               
           </div>
       </div>
-      <nav className={` md:hidden items-end md:space-x-8 pt-12  text-left  ${mobileNav ? 'block fixed top-0 h-screen w-screen  bg-[#F5F5F5] z-50' : 'hidden'}`}>
-        <div className='flex justify-end px-12 text-pry text-4xl' onClick={() => setMobileNav(false)}>
+      <div className={` md:hidden items-end md:space-x-8 pt-12  text-left  ${mobileNav ? 'block fixed top-0 h-screen w-screen  bg-[#F5F5F5] z-50 ease-in duration-500 ' : 'fixed top-[-100%] ease-out duration-100 '}`}>
+        <div className='flex justify-end px-12 text-pry text-4xl ' onClick={() => setMobileNav(false)}>
           <AiOutlineClose  />
         </div>
             <ul className='flex flex-col space-y-6 divide-y divide-pry '>
@@ -65,7 +65,7 @@ const Header = () => {
                   } onClick={() => handleNav(data.id)}><li>{data.title}</li></Link>
               )}
             </ul>
-          </nav>
+          </div>
           
     </header>
   )
