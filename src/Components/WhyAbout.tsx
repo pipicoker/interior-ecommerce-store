@@ -1,12 +1,35 @@
-import React from 'react'
-
+import React, { useRef, useEffect } from 'react'
+import { useAnimation, motion, useInView } from "framer-motion";
 import BenefitsData from '../Data/BenefitsData'
 import whyfurniture from '../Images/whyfurniture.png'
 
 
 const WhyAbout = () => {
+  const controls = useAnimation();
+  const ref = useRef(null)
+  const inView = useInView(ref)
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    else {
+      controls.start("hidden");
+    }
+    console.log(inView);
+    
+  }, [controls, inView]);
   return (
-    <div className='pt-24 grid lg:grid-cols-2 items-center '>
+    <motion.div
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={{
+        hidden: {opacity: 0, x: 75},
+        visible: {opacity: 1, x: 0},
+      }}
+      transition={{duration: 1}}
+      className='pt-24 grid lg:grid-cols-2 items-center '>
       
       <div className='hidden lg:block'>
         <img src={whyfurniture} alt="" />
@@ -28,7 +51,7 @@ const WhyAbout = () => {
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

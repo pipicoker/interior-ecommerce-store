@@ -1,4 +1,5 @@
-import React, {useEffect, useRef} from 'react'
+import React, { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import Line from '../Images/Line.png'
 import Arrow from '../Images/Arrow.png'
 
@@ -28,10 +29,10 @@ const BestSelling = () => {
       animate={controls}
       initial="hidden"
       variants={{
-        hidden: {opacity: 0, y: -75},
+        hidden: {opacity: 0, y: 75},
         visible: {opacity: 1, y: 0},
       }}
-      transition={{duration: 3, delay: 0.25}}
+      transition={{duration: 1}}
         >
             <div className='  flex justify-between items-center'>
                 <div>
@@ -43,10 +44,10 @@ const BestSelling = () => {
                 <h3 className='mt-2 text-3xl md:text-5xl text-left'>Our Best Selling Products</h3>   
             </div>
             
-            <div className='hidden md:flex items-center space-x-4' >
+            <Link to="./productpage" className='hidden md:flex items-center space-x-4' >
                 <p>Explore All</p>
                 <img src={Arrow} alt="" />
-            </div>
+            </Link>
         
             </div> 
             

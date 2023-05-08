@@ -1,11 +1,35 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
+import { useAnimation, motion, useInView } from "framer-motion";
 
 import whatcouch from '../Images/whatcouch.png'
 
 
 const WhatAbout = () => {
+  const controls = useAnimation();
+  const ref = useRef(null)
+  const inView = useInView(ref)
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    else {
+      controls.start("hidden");
+    }
+    console.log(inView);
+    
+  }, [controls, inView]);
   return (
-    <div className=' grid lg:grid-cols-2 gap-12 lg:gap-36 justify-center items-center'>
+    <motion.div
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={{
+        hidden: {opacity: 0, x: -75},
+        visible: {opacity: 1, x: 0},
+      }}
+      transition={{ duration: 1 }}
+      className=' grid lg:grid-cols-2 gap-12 lg:gap-36 justify-center items-center'>
       
           <div className='text-left'>
               <h2 className='text-6xl font-semibold text-blac2'>What <span className='text-pry'>We Do</span></h2>
@@ -15,7 +39,7 @@ const WhatAbout = () => {
           <div>
               <img src={whatcouch} alt="couch"  className='w-[648px] lg:h-[470px]'/>
           </div>
-    </div>
+    </motion.div>
   )
 }
 

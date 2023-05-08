@@ -1,6 +1,7 @@
 import { useState,  createContext } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
+import { AnimatePresence } from 'framer-motion';
 
 import Footer from './Components/Footer';
 import Header from './Components/Header';
@@ -41,11 +42,7 @@ type CartItem = {
 }
 
 function App() {
-  // const All = FurnituresData;
-  // const livingRoom = FurnituresData[0];
-  // const office = FurnituresData[1];
-  // const bedRoom = FurnituresData[2];
-  // const kitchen = FurnituresData[3];
+  const location = useLocation()
 
   const [productVal, setProductVal] = useState(FurnituresData[0].furnitures)
 
@@ -169,8 +166,9 @@ function App() {
                               <removeCartItemContext.Provider value={removeCartItem}>
                                 <handleIncrementCountContext.Provider value={handleIncrementCount}>
                                   <handleDecrementCountContext.Provider value={handleDecrementCount}>
-                                    <calculateCartTotalContext.Provider value={calculateCartTotal}>
-                                      <Routes>
+                                  <calculateCartTotalContext.Provider value={calculateCartTotal}>
+                                    <AnimatePresence mode='wait'>
+                                      <Routes key={location.pathname} location={location}>
                                         <Route path="/" element={<Homepage />} />
 
                                         <Route path="/Productpage" element={<Productpage />} />
@@ -179,6 +177,8 @@ function App() {
                                         <Route path="/Contactpage" element={<Contactpage />} />
                                         <Route path="/Cart" element={<Cart />} />
                                       </Routes>
+                                    </AnimatePresence>
+                                      
                                     </calculateCartTotalContext.Provider>
                                    </handleDecrementCountContext.Provider>
                                   </handleIncrementCountContext.Provider>

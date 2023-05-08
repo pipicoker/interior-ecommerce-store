@@ -31,7 +31,7 @@ const Trending = () => {
         hidden: {opacity: 0, y: 75},
         visible: {opacity: 1, y: 0},
       }}
-      transition={{duration: 3, delay: 0.25}}
+      transition={{duration: 1}}
     >
       <div className='  flex justify-between items-center'>
                 <div>

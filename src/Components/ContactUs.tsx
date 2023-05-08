@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React, { useRef, useEffect } from 'react'
+import { useAnimation, motion, useInView } from "framer-motion";
 import ContactData from '../Data/ContactData'
 
 import contactfurniture from '../Images/contactfurniture.png'
@@ -7,8 +7,31 @@ import Line from '../Images/Line.png'
 
 
 const ContactUs = () => {
+    const controls = useAnimation();
+  const ref = useRef(null)
+  const inView = useInView(ref)
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    else {
+      controls.start("hidden");
+    }
+    console.log(inView);
+    
+  }, [controls, inView]);
   return (
-    <div className='grid lg:grid-cols-2 items-center font-semibold'>
+      <motion.div
+          ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={{
+        hidden: {opacity: 0, y: 75},
+        visible: {opacity: 1, y: 0},
+      }}
+      transition={{duration: 1}}
+          className='grid lg:grid-cols-2 items-center font-semibold'>
           <div className='order-2 lg:order-1 pt-6 lg:pt-0'>
               <div className='flex items-center space-x-2'>
                   <img src={Line} alt="" />
@@ -39,7 +62,7 @@ const ContactUs = () => {
           <div className='order-1 lg:order-2'>
               <img src={contactfurniture} alt="" />
           </div>
-    </div>
+    </motion.div>
   )
 }
 

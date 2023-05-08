@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 import Benefits from '../Components/Benefits'
 import BestSelling from '../Components/BestSelling'
 import ClientsReview from '../Components/ClientsReview'
@@ -13,15 +15,17 @@ import Trending from '../Components/Trending'
 const Homepage = () => {
 
   return (
-    <div
-  
+    <motion.div
+      initial={{ opacity: 0.5 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
       className='bg-background font-manrope'>
       <Hero />
       <Benefits />
       <BestSelling />
       <ClientsReview />
       <Trending />
-    </div>
+    </motion.div>
   )
 }
 

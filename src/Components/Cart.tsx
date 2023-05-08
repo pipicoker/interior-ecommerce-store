@@ -1,7 +1,10 @@
-import {useContext} from 'react'
+import { useContext } from 'react'
+import { Link } from 'react-router-dom';
+
 import {cartItemsContext, handleIncrementCountContext, handleDecrementCountContext, removeCartItemContext, calculateCartTotalContext } from "../App"
 
 import { AiOutlineDelete } from 'react-icons/ai';
+import { FaLongArrowAltRight } from 'react-icons/fa';
 
 
 const Cart = () => {
@@ -14,8 +17,15 @@ const Cart = () => {
 
   return (
     <div className='px-8 md:px-24 py-12 bg-gray-50'>
-          {cartItems.length === 0 ? (
-              <p>Cart is empty</p>
+      {cartItems.length === 0 ? (
+        <div className='flex flex-col  space-y-4 text-gray-700'>
+          <p className='text-2xl'>Cart is empty</p>
+          <Link to="../productpage" className='flex items-center justify-center space-x-2 text-xl underline decoration-pry'>
+            <p>Go to Products</p>
+            <FaLongArrowAltRight />
+          </Link>
+        </div>
+              
           ) : (
                   <div className=' space-y-4 '>
             {cartItems.map((data) => 
