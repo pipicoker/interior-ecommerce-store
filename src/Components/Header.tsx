@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import NavData from '../Data/NavData';
 
@@ -11,6 +11,8 @@ import { RiShoppingCartLine } from 'react-icons/ri';
 import { RxHamburgerMenu } from 'react-icons/rx';
 
 const Header = () => {
+  const location = useLocation()
+
   const [activeNav, setActiveNav] = useState("one")
   const [mobileNav, setMobileNav] = useState(false)
 
@@ -33,7 +35,7 @@ const Header = () => {
           <nav>
             <ul className="hidden md:flex items-end md:space-x-6 lg:space-x-8  ">
               {NavData.map((data) => 
-                <Link to={data.path as string} key={data.id} className={`text-lg font-semibold cursor-pointer transform transition duration-300 hover:scale-110 hover:text-gray-800 ${data.id === activeNav ? 'bg-pry text-white px-3 pt-8 pb-2 rounded-b-lg' : 'bg-[#F5F5F5] text-blac pb-2'}`} onClick={() => handleNav(data.id)}>{data.title}</Link>
+                <Link to={data.path as string} key={data.id} className={`text-lg font-semibold cursor-pointer transform transition duration-300 hover:scale-110 hover:text-gray-800 ${location.pathname === data.path ? 'bg-pry text-white px-3 pt-8 pb-2 rounded-b-lg' : 'bg-[#F5F5F5] text-blac pb-2'}`} onClick={() => handleNav(data.id)}>{data.title}</Link>
               )}
             </ul>
           </nav>

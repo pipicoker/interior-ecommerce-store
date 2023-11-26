@@ -13,17 +13,17 @@ const NavData: NavDataItem[] = [
     {
         id: "two",
         title: "Product",
-        path: "./productpage"
+        path: "/productpage"
     },
     {
         id: "three",
         title: "About Us",
-        path: "./Aboutpage"
+        path: "/Aboutpage"
     },
     {
         id: "four",
         title: "Contact Page",
-        path: "./Contactpage"
+        path: "/Contactpage"
     },
 ]
 
