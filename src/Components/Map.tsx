@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import { useAnimation, motion, useInView } from "framer-motion";
-import map from '../Images/map.png'
+import map from '../Images/map.jpg'
 
 
 const Map = () => {
@@ -29,7 +29,7 @@ const Map = () => {
       }}
       transition={{duration: 1}}
       className='py-32'>
-      <img src={map} alt="" />
+      <img src={map} alt="" className='w-full' />
     </motion.div>
   )
 }

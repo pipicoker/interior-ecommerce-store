@@ -32,7 +32,7 @@ const Hero = () => {
       >
           <section
             
-              className='bg-hero-bg h-[638px]  flex flex-col justify-center items-center'>
+              className='bg-hero-bg bg-no-repeat bg-cover h-[638px]  flex flex-col justify-center items-center'>
               <h1 className='text-5xl md:text-7xl text-center  font-semibold text-white'>Best furniture to <br />
                   your doorstep</h1>
               

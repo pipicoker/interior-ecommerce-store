@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import { useAnimation, motion, useInView } from "framer-motion";
 
-import whatcouch from '../Images/whatcouch.png'
+import whatcouch from '../Images/whatcouch.jpg'
 
 
 const WhatAbout = () => {

@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-bg': "url('./Images/hero-bg.png')",
-        'summer1-bg': "url('./Images/summer1.png')",
-        'summer2-bg': "url('./Images/summer2.png')",
+        'hero-bg': "url('./Images/hero-bg.jpg')",
+        'summer1-bg': "url('./Images/summer1.jpg')",
+        'summer2-bg': "url('./Images/summer2.jpg')",
       },
       colors: {
         'blac': '#000000',

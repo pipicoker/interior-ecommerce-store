@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <header className=''>
       <div className='bg-[#F5F5F5]  h-[101px] px-8 lg:px-14 pb-10  flex items-center justify-between'>
-        <div className="logo">
+          <div className="logo">
               <img src={logo} alt="logo" />
           </div>
           
@@ -40,20 +40,19 @@ const Header = () => {
             </ul>
           </nav>
 
-          <div className='flex space-x-3 items-center'>
               
         
-            <div className='flex space-x-4 text-blac'>
-              <BiUser className='h-7 w-5'/>
-              <AiOutlineHeart className='h-6 w-7 hidden md:block'/>
-          <Link to="/Cart"><RiShoppingCartLine className='h-7 w-7' /></Link>
-          <RxHamburgerMenu className='md:hidden h-7 w-6 text-pry ' onClick={handleMenu}/>
-            </div>
-        
+          <div className='flex items-center space-x-4 text-blac'>
+            <BiUser className='h-7 w-5'/>
+            <AiOutlineHeart className='h-6 w-7 hidden md:block'/>
+            <Link to="/Cart"><RiShoppingCartLine className='h-7 w-7' /></Link>
+            <RxHamburgerMenu className='md:hidden h-7 w-6 text-pry ' onClick={handleMenu}/>
+          </div>
+      
 
               
-          </div>
       </div>
+
       <div className={` md:hidden items-end md:space-x-8 pt-12  text-left  ${mobileNav ? 'block fixed top-0 h-screen w-screen  bg-[#F5F5F5] z-50 ease-in duration-500 ' : 'fixed top-[-100%] ease-out duration-100 '}`}>
         <div className='flex justify-end px-12 text-pry text-4xl ' onClick={() => setMobileNav(false)}>
           <AiOutlineClose  />

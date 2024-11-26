@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react'
 import { useAnimation, motion, useInView } from "framer-motion";
 import ContactData from '../Data/ContactData'
 
-import contactfurniture from '../Images/contactfurniture.png'
+import contactfurniture from '../Images/contactfurniture.jpg'
 import Line from '../Images/Line.png'
 
 

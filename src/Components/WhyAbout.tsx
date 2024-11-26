@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import { useAnimation, motion, useInView } from "framer-motion";
 import BenefitsData from '../Data/BenefitsData'
-import whyfurniture from '../Images/whyfurniture.png'
+import whyfurniture from '../Images/whyfurniture.jpg'
 
 
 const WhyAbout = () => {
@@ -36,7 +36,7 @@ const WhyAbout = () => {
       </div>
 
       <div className='text-left md:pl-[68px] '>
-        <h2 className='text-6xl font-semibold text-blac2'>What <span className='text-pry'>We Do</span></h2>
+        <h2 className='text-6xl font-semibold text-blac2'>Why <span className='text-pry'>We Do</span></h2>
         <p className='m-2 text-lg font-normal text-blac opacity-60'>We offer customers a convenient and cost-effective way to find and purchase the furniture they need</p>
 
         <div className='mt-14 grid  md:grid-cols-2 gap-6'>

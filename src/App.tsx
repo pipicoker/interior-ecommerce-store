@@ -97,6 +97,7 @@ function App() {
       item.id === data.id ? { ...item, count: item.count } : item
       );
       setCartItems(updatedCartItems);
+      alert('item added to cart')
     }
     else {
 
