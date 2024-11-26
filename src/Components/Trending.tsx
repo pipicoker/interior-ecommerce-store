@@ -1,4 +1,5 @@
 import React, {useRef, useEffect} from 'react'
+import { Link } from 'react-router-dom'
 
 import Line from '../Images/Line.png'
 import Arrow from '../Images/Arrow.png'
@@ -43,10 +44,10 @@ const Trending = () => {
                 <h3 className='mt-2 text-3xl md:text-5xl text-left'>Our Trending Products</h3>   
             </div>
             
-            <div className='hidden md:flex items-center space-x-4 text-blac' >
+            <Link to="./productpage" className='hidden md:flex items-center space-x-4 text-blac' >
                 <p className=''>Explore All</p>
                 <img src={Arrow} alt="" />
-            </div>
+            </Link>
         
           </div>
           
