@@ -34,9 +34,9 @@ const Footer = () => {
           </div>
           
           <form className='hidden relative md:flex flex-col  items-start md:pt-8 lg:pt-0'>
-              <label className='text-white text-base mb-1'>Get in touch with us ,Subscribe to our Newsletter!</label>
+              <label htmlFor='intouch' className='text-white text-base mb-1'>Get in touch with us ,Subscribe to our Newsletter!</label>
               
-                  <input type="email" className='w-[650px] h-[73px] rounded'/>
+                  <input id='intouch' type="email" className='w-[650px] h-[73px] rounded'/>
                     <button className='absolute bg-[#F67A24] ml-[445px] mt-10 w-44 h-12 px-6 py-3 rounded text-lg text-[#FBFCFE]'>Subscribe</button>
             
               
