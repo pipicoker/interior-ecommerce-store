@@ -44,7 +44,7 @@ const Benefits = () => {
           <div className='mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4 '>
               {BenefitsData.map((data) => 
             <div key={data.id} className="w-72 h-[250px] px-8  border border-graay flex flex-col justify-center items-center rounded-2xl transform transition duration-500 hover:scale-110">
-                      <h5 className='text-2xl text-blac'>{data.summary}</h5>
+                      <p className='text-2xl text-blac'>{data.summary}</p>
                       <p className='text-lg font-normal mt-4 text-blac opacity-60'>{data.expression}</p>
             </div>
               )}

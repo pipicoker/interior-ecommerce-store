@@ -33,11 +33,11 @@ const Header = () => {
           </div>
           
           <nav>
-            <ul className="hidden md:flex items-end md:space-x-6 lg:space-x-8  ">
+            <div className="hidden md:flex items-end md:space-x-6 lg:space-x-8  ">
               {NavData.map((data) => 
-                <Link to={data.path as string} key={data.id} className={`text-lg font-semibold cursor-pointer transform transition duration-300 hover:scale-110 hover:text-gray-800 ${location.pathname === data.path ? 'bg-pry text-white px-3 pt-8 pb-2 rounded-b-lg' : 'bg-[#F5F5F5] text-blac pb-2'}`} onClick={() => handleNav(data.id)}>{data.title}</Link>
+                 <Link to={data.path as string} key={data.id} className={`text-lg font-semibold cursor-pointer transform transition duration-300 hover:scale-110 hover:text-gray-800 ${location.pathname === data.path ? 'bg-pry text-white px-3 pt-8 pb-2 rounded-b-lg' : 'bg-[#F5F5F5] text-blac pb-2'}`} onClick={() => handleNav(data.id)}>{data.title}</Link>
               )}
-            </ul>
+            </div>
           </nav>
 
               
@@ -57,15 +57,15 @@ const Header = () => {
         <div className='flex justify-end px-12 text-pry text-4xl ' onClick={() => setMobileNav(false)}>
           <AiOutlineClose  />
         </div>
-            <ul className='flex flex-col space-y-6 divide-y divide-pry '>
+            <div className='flex flex-col space-y-6 divide-y divide-pry '>
               {NavData.map((data) => 
                 <Link to={data.path as string}
                   key={data.id}
                   className={` text-lg font-semibold cursor-pointer pl-8 pt-6 ${data.id === activeNav ? 'bg-[#F5F5F5] text-pry  pt-8  rounded-b-lg' : 'bg-[#F5F5F5] text-blac '}`
                     
-                  } onClick={() => handleNav(data.id)}><li>{data.title}</li></Link>
+                  } onClick={() => handleNav(data.id)}>{data.title}</Link>
               )}
-            </ul>
+            </div>
           </div>
           
     </header>
